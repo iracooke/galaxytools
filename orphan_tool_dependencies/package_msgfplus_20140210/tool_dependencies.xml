@@ -8,6 +8,9 @@
                     <source>MSGFPlus.jar</source>
                     <destination>$INSTALL_DIR</destination>
                 </action>
+                
+                <!-- This is purely so we can find it using which -->
+                <action type="shell_command">chmod u+x $INSTALL_DIR/MSGFPlus.jar</action>
                 <action type="set_environment">
                     <environment_variable name="MSGFPLUS_ROOT" action="set_to">$INSTALL_DIR</environment_variable>
                     <environment_variable name="PROTK_MSGFPLUS_ROOT" action="set_to">$INSTALL_DIR</environment_variable>
